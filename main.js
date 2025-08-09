@@ -733,7 +733,7 @@
 // //             minTemp=clima[i].temperatura
 // //             diaMin=clima[i].dia
 // //         }
-// //         return alert (`El día de T máx fue ${diaMax} con una T de ${maxTemp} \n y el día con T min fue ${diaMin} con una T de ${minTemp}`)
+// //          alert (`El día de T máx fue ${diaMax} con una T de ${maxTemp} \n y el día con T min fue ${diaMin} con una T de ${minTemp}`)
 // //     }
 
 // // }
@@ -751,3 +751,464 @@
 // }
 
 // clima ()
+
+
+
+
+// ### Ejercicio 7: Conversor de grados
+
+// > Array con temperaturas en Celsius.
+// > 
+// > 
+// > Función que retorne un nuevo array en Fahrenheit.
+// >
+
+// // const tC = [18, 20, 22, 19, 24, 26, 21];
+
+
+// // const far= tF => {
+// //     const arraytF= [];
+// //     for (let index = 0; index < tC.length; index++) {
+// //         let tF=(tC[index]*(9/5)) + 32
+// //         arraytF.push(tF)
+// //     }
+// //     return arraytF
+// // }
+// // alert (far(tF))
+
+
+// ### Ejercicio 8: Contador de elementos
+
+// > Recibe un array con palabras.
+// > 
+// > 
+// > Función que devuelva cuántas veces aparece cada una (objeto con frecuencia).
+// >
+
+
+// // const palabras = [
+// //     "gato",
+// //     "perro",
+// //     "casa",
+// //     "sol",
+// //     "gato",
+// //     "luna",
+// //     "perro",
+// //     "flor",
+// //     "gato",
+// //     "casa"
+// // ];
+
+// // function repetida() {
+// //     const frecuencia={};
+// //     for (let index = 0; index < palabras.length; index++) {
+// //         const palabra = palabras[index];
+// //         if (frecuencia[palabra]) {
+// //             frecuencia[palabra] += 1
+// //         }
+// //         else{
+// //             frecuencia[palabra]=1
+// //         }
+        
+// //     }
+// //     console.log (frecuencia)
+// // }
+
+// // repetida()
+
+
+
+// ### Ejercicio 9: Ordenador de puntajes
+
+// > Array de puntajes (números).
+// > 
+// > 
+// > Función que devuelva los puntajes ordenados de mayor a menor.
+// >
+
+
+
+// // const puntajes = [5, 8, 12, 7, 8, 3, 15, 5, 20, 8];
+
+
+// // const ordenados = puntajes.sort((a,b)=>b-a)
+
+// // console.log (ordenados)
+
+
+
+// ### Ejercicio 10: Carrito de compras
+
+// > Array de productos con precio.
+// > 
+// > 
+// > Función que calcule el total del carrito.
+// >
+
+// // const productos = [
+// //     { nombre: "Pan", precio: 150 },
+// //     { nombre: "Leche", precio: 300 },
+// //     { nombre: "Queso", precio: 850 },
+// //     { nombre: "Huevos", precio: 650 },
+// //     { nombre: "Café", precio: 1200 },
+// //     { nombre: "Manteca", precio: 400 }
+// // ];
+
+
+
+// // const resultado=()=>{
+// //     suma=0
+
+// //     for (let index = 0; index < productos.length; index++) {
+// //         suma += productos[index].precio
+        
+// //     }
+// //     alert (suma)
+// // }
+// // resultado()
+
+
+
+
+// ### Ejercicio 11: Encuesta de edades
+
+// > Recibe un array de edades.
+// > 
+// > 
+// > Función que devuelva cuántos son menores, adultos y mayores.
+// >
+
+// // const edades=[];
+// //     let niños= 0;
+// //     let adultos= 0;
+// //     let veteranos=0;
+// // function edad() {
+
+// //     for (let index = 0; index < 10; index++) {
+// //         numero=Number(prompt("Decinos tu edad"));
+// //         edades.push(numero)
+// //         if (numero<18) {
+// //             niños += 1
+// //         }
+// //         else if (numero>=18 && numero <=65) {
+// //             adultos +=1
+// //         }
+// //         else  {
+// //             veteranos +=1
+// //         }
+        
+// //     }
+
+// //     alert(`Ayuda, son: ${niños} niños; ${adultos} adultos; y ${veteranos} veteranos`);
+// // }
+
+
+// // edad()
+
+
+// ### Ejercicio 12: Generador de nombres de usuario
+
+// > Recibe un array de nombres y apellidos.
+// > 
+// > 
+// > Función que cree un nombre de usuario (ej: juan.perez).
+// >
+
+
+// // const personas = [
+// //     { nombre: "Juan", apellido: "Pérez" },
+// //     { nombre: "María", apellido: "Gómez" },
+// //     { nombre: "Carlos", apellido: "López" },
+// //     { nombre: "Ana", apellido: "Martínez" },
+// //     { nombre: "Luis", apellido: "Rodríguez" }
+// // ];
+
+
+// // function nombres() {
+// //     const usuarios=[];
+// //     for (let index = 0; index < personas.length; index++) {
+// //         let nombre= personas[index].nombre.toLowerCase();
+// //         let apellido=personas[index].apellido.toLowerCase();
+// //         let usuario=`${nombre}.${apellido}`;
+// //         usuarios.push(usuario);
+// //     }
+// //     console.log(usuarios)
+// // }
+
+// // nombres()
+
+
+
+
+
+// ### Ejercicio 13: Validador de correos
+
+// > Recibe un array de emails.
+// > 
+// > 
+// > Función que devuelva solo los válidos (contienen “@”).
+// >
+
+
+// // const emails = [
+// //     "sofia.garcia@email.com",
+// //     "juan.perez@email.com",
+// //     "mariana.lopez@email.com",
+// //     "carlos.mendez@email.com",
+// //     "lucia.fernandez@email.com",
+// //     "diego.rios@email.com",
+// //     "carlos.mendezemail.com",
+// //     "luciafernandez.email.com",
+// //     "diego.rios.email.com",
+// //     "valentina.martinemail.com",
+// //     "matias.rodriguezemail.com",
+// //     "camila.sanchez.email.com",
+// //     "valentina.martin@email.com",
+// //     "matias.rodriguez@email.com",
+// //     "camila.sanchez@email.com",
+// //     "nico.gonzalez@email.com"
+// // ];
+
+// // // function emailValido() {
+// // //     let email=[]
+
+// // //     for (let index = 0; index < emails.length; index++) {
+        
+// // //         let nombreValido= emails[index].includes("@");
+// // //         if (nombreValido==true) {
+// // //             email.push(emails[index]);
+// // //         }
+// // //     }
+// // //     console.log(email)
+// // // }
+// // // emailValido()
+
+
+// // const emailValido= emails.filter(email=>email.includes("@"))
+
+// // console.log(emailValido)
+
+// ### Ejercicio 14: Calculadora de promedios por alumno
+
+// > Array de objetos con nombre y array de notas.
+// > 
+// > 
+// > Función que retorne el promedio por alumno.
+// >
+// // const alumnos = [
+// //     { nombre: "Sofía", notas: [8, 9, 10] },
+// //     { nombre: "Juan", notas: [6, 7, 5] },
+// //     { nombre: "Camila", notas: [9, 9, 8] },
+// //     { nombre: "Pedro", notas: [4, 6, 5] }
+// // ];
+
+
+// // function promedios() {
+// //     const promedio=[]
+// //     for (let index = 0; index < alumnos.length; index++) {
+// //         let valores=0
+// //         let nota=alumnos[index].notas
+// //         for (let i = 0; i < nota.length; i++) {
+// //             valores += nota[i]
+            
+// //         }
+// //         let valor=valores/nota.length
+
+// //         promedio.push({nombre: alumnos[index].nombre, promedio: valor})
+// //     }
+// //     console.log(promedio)
+// // }
+
+// // promedios()
+
+
+// ### Ejercicio 15: Agenda diaria
+
+// > Crea un objeto con días como claves y actividades como valores.
+// > 
+// > 
+// > Función que muestre actividades por día.
+// >
+
+// // const agenda = {
+// //     lunes: "Gimnasio a las 8:00",
+// //     martes: "Clase de inglés a las 18:00",
+// //     miércoles: "Trabajo remoto todo el día",
+// //     jueves: "Reunión de equipo a las 10:00",
+// //     viernes: "Cena con amigos a las 21:00",
+// //     sábado: "Ir al parque",
+// //     domingo: "Descansar y ver películas"
+// // };
+
+// // function actividad() {
+// //     let dia= prompt("¿La actividad de qué día te interesaba ver?").toLowerCase()
+// //         if (agenda[dia]) {
+// //         alert(`Ese día tenes: ${agenda[dia]}`)
+// //     }
+// //         else{
+// //         alert("No")
+// //     }
+// // }
+
+// // actividad()
+
+// ### Ejercicio 16: Sistema de votación
+
+// > Array con votos (ej: "A", "B", "A", "C").
+// > 
+// > 
+// > Función que devuelva cuántos votos tuvo cada opción.
+// >
+
+// // const votos = [
+// //     "A", "B", "A", "C", "A", "B", "C", "A", "C", "B",
+// //     "A", "C", "B", "A", "B", "C", "C", "A", "B", "A",
+// //     "C", "B", "A", "C", "B", "A", "B", "C", "A", "B"
+// // ];
+
+// // function contador() {
+// //     let sumaA= 0
+// //     let sumaB=0
+// //     let sumaC=0
+    
+// //     for (let index = 0; index < votos.length; index++) {
+// //         if (votos[index]=="A") {
+// //             sumaA++ ;
+// //         }
+// //         else if (votos[index]=="B") {
+// //             sumaB++;
+// //         }
+// //         else{
+// //             sumaC++;
+// //         }
+// //     }
+// //     console.log(sumaA);
+// //     console.log(sumaB);
+// //     console.log(sumaC);
+// // }
+
+// // contador()
+
+// ### Ejercicio 17: Simulador de encuesta de satisfacción
+
+// > Array de objetos con usuario y puntaje (1–5).
+// > 
+// > 
+// > Función que devuelva el promedio y los usuarios que votaron 5.
+// >
+
+// // const usuarios = [
+// //     { usuario: "sofia_g", puntaje: 4 },
+// //     { usuario: "juan23", puntaje: 5 },
+// //     { usuario: "cami.luna", puntaje: 3 },
+// //     { usuario: "peter_pan", puntaje: 2 },
+// //     { usuario: "nati_89", puntaje: 5 },
+// //     { usuario: "marcelo_x", puntaje: 1 },
+// //     { usuario: "ari.dev", puntaje: 4 },
+// //     { usuario: "lau.fer", puntaje: 3 },
+// //     { usuario: "tomi_ok", puntaje: 2 },
+// //     { usuario: "vero_b", puntaje: 5 }
+// // ];
+
+// // function promedios() {
+// //     suma=0
+// //     for (let index = 0; index < usuarios.length; index++) {
+// //         suma+=usuarios[index].puntaje
+// //         promedio=suma/usuarios.length
+// //     }
+// //     console.log(promedio)
+    
+// // }
+
+// // promedios();
+
+// // function votaronCinco(){
+// //     for (let index = 0; index < usuarios.length; index++) {
+// //         if (usuarios[index].puntaje===5) {
+// //             alert(`Bien ahí ${usuarios[index].usuario}, nos querés`);
+// //         }
+// //         else if(usuarios[index].puntaje != 5){
+// //             alert(`El usuario ${usuarios[index].usuario} no soportó`)
+// //         }
+// //     }
+// // }
+
+// // votaronCinco(usuarios)
+
+
+// ### Ejercicio 18: Registro de ventas
+
+// > Array de objetos con producto, cantidad y precio unitario.
+// > 
+// > 
+// > Función que calcule total por venta y general.
+// >
+
+
+// // const carrito = [
+// //     { producto: "Manzanas", cantidad: 3, precioUnitario: 150 },
+// //     { producto: "Pan", cantidad: 2, precioUnitario: 250 },
+// //     { producto: "Leche", cantidad: 1, precioUnitario: 300 },
+// //     { producto: "Huevos", cantidad: 12, precioUnitario: 25 },
+// //     { producto: "Yerba", cantidad: 1, precioUnitario: 1200 }
+// // ];
+
+// // function total() {
+// //     let suma=0
+// //     for (let index = 0; index < carrito.length; index++) {
+// //         if (carrito[index].cantidad != 0) {
+// //             let sumaUnoSolo=carrito[index].cantidad*carrito[index].precioUnitario
+// //             suma += carrito[index].precioUnitario*carrito[index].cantidad
+// //                 console.log(`El precio por el producto ${carrito[index].producto} es ${sumaUnoSolo}`)
+// //         }
+
+// //     }
+
+
+// //     console.log(`El precio total es ${suma}`)
+// // }
+// // total()
+
+
+// ### Ejercicio 19: Clasificador de películas
+
+// > Array con películas (título, año, género).
+// > 
+// > 
+// // // > Función que devuelva las de un género específico.
+// // // >
+
+
+// // const peliculas = [
+// //     { titulo: "El Señor de los Anillos: La Comunidad del Anillo", anio: 2001, genero: "Fantasía" },
+// //     { titulo: "Titanic", anio: 1997, genero: "Romance/Drama" },
+// //     { titulo: "Jurassic Park", anio: 1993, genero: "Ciencia Ficción" },
+// //     { titulo: "Avengers: Endgame", anio: 2019, genero: "Acción/Superhéroes" },
+// //     { titulo: "El Padrino", anio: 1972, genero: "Crimen/Drama" }
+// // ];
+
+// // const generoCrimen= peliculas.filter(pelicula=>pelicula.genero=="Crimen/Drama")
+
+// // console.log (generoCrimen)
+
+// ### Ejercicio 20: Simulador de favoritos
+
+// > Array de objetos con nombre y favorito: true/false.
+// > 
+// > 
+// > Función que devuelva los elementos marcados como favoritos.
+// >
+
+// // const personas = [
+// //     { nombre: "Sofía", favorito: true },
+// //     { nombre: "Lucas", favorito: false },
+// //     { nombre: "María", favorito: true },
+// //     { nombre: "Julián", favorito: false },
+// //     { nombre: "Ana", favorito: true }
+// // ];
+
+// // const favoritos= personas.filter(persona=>persona.favorito===true);
+
+// // console.log(favoritos)
+
+
