@@ -1211,4 +1211,327 @@
 
 // // console.log(favoritos)
 
+// # Semana 5
+
+// # Ejercicios con Clases y localStorage
+
+// 1. **Gestor de Productos**
+//     - Crea una clase Producto con nombre y stock.
+//     - Crea una clase Inventario para manejar un array de productos.
+//     - Métodos: agregarProducto, eliminarProducto, mostrarProductos.
+//     - Persiste el inventario en localStorage.
+
+
+// // class producto{
+// //     constructor (nombre, stock) {
+// //         this.nombre=nombre;
+// //         this.stock=stock;
+// //     }
+// // }
+
+// // class inventario {
+// //     constructor(){
+// //         const datosGuardados= localStorage.getItem("inventario");
+// //         //condicion ? si es verdad : si es falso
+// //         this.productos= datosGuardados ? JSON.parse (datosGuardados): [];
+// //     }
+
+// //     //guardar dentro del inventario
+// //     guardar() {
+// //     localStorage.setItem("inventario", JSON.stringify(this.productos)) }
+
+// //         agregarProducto(nombre,stock){
+// //             const nuevoProducto = new producto(nombre, stock);
+// //             this.productos.push(nuevoProducto);
+// //             this.guardar();
+
+// //         }
+
+// //         eliminarProducto (nombre){
+// //             this.productos=this.productos.filter(producto=>producto !== nombre);
+// //             this.guardar();
+// //         }
+    
+// //         //mostrarProducto 
+
+
+
+
+// // }
+
+
+// 2. **Biblioteca de Libros**
+//     - Clase Libro con título y autor.
+//     - Clase Biblioteca con método buscarPorAutor(autor).
+//     - Guarda la biblioteca en localStorage.
+
+
+
+// // class Libro {
+// //     constructor(titulo, autor) {
+// //         this.titulo=titulo;
+// //         this.autor=autor;
+// //     }
+// // }
+
+// // class Biblioteca{
+// //     constructor (){
+// //         const datosGuardados= localStorage.getItem("Biblioteca");
+// //         this.libros= datosGuardados ? JSON.parse(datosGuardados):[];
+// //     }
+
+// //     //guardar
+
+// //     guardar(){
+// //         localStorage.setItem("biblioteca", JSON.stringify(this.libros));
+// //     }
+
+// //     //agregar
+
+// //     agregarLibro (titulo, autor){
+// //         const nuevoLibro= new Libro(titulo, autor);
+// //         this.libros.push(nuevoLibro);
+// //         this.guardar();
+// //     }
+
+// //     //buscar
+
+// //     buscarPorAutor (){
+// //         return this.libros.filter(libro=>libro.autor===autor);
+// //     }
+// // }
+
+// // const miBiblioteca= new Biblioteca ();
+
+
+// // miBiblioteca.agregarLibro("Rayuela", "Cortázar");
+// // miBiblioteca.agregarLibro("El Aleph", "Borges");
+
+
+// // console.log(miBiblioteca.libros);
+
+// // const autor= prompt("AUTOR");
+
+// // console.log(miBiblioteca.buscarPorAutor(autor));
+
+
+
+// 3. **Gestor de Calificaciones**
+//     - Clase Alumno con array de notas.
+//     - Método para calcular promedio.
+//     - Guarda cada alumno con sus notas en localStorage.
+
+// // class Alumno {
+// //     constructor(nombre, nota1, nota2) {
+// //         this.nombre=nombre;
+// //         this.nota1=nota1;
+// //         this.nota2=nota2;
+        
+// //     }
+// //     //Los metodos son sin function, son metodos
+// //     promedio (){
+// //             return (this.nota1+this.nota2) /2            
+// //         }
+// // }
+
+
+// // class GestorAlumno {
+// //     constructor(){
+// //         const datosGuardados= localStorage.getItem("alumnnos");
+// //         this.alumnos= datosGuardados ? JSON.parse(datosGuardados) : [];
+// //     }
+
+// //     //guardar
+// //     guardar(){
+// //         localStorage.setItem("alumnos", JSON.stringify(this.alumnos));
+// //     }
+
+
+// //     //agregar
+
+// //     agregarAlumno (nombre, nota1, nota2){
+// //         const nuevoAlumno= new Alumno(nombre, nota1, nota2);
+// //         this.alumnos.push(nuevoAlumno);
+// //         this.guardar();
+// //     }
+
+// //     //mostrar
+
+// //     mostrarPromedios(){
+// //         for (let index = 0; index < this.alumnos.length; index++) {
+// //             const alumno= this.alumnos[index];
+// //             console.log(`${alumno.nombre}; ${alumno.promedio()}`)
+// //         }
+// //     }
+
+// // }
+
+
+// // //agregar
+
+// // const miAlumno= new GestorAlumno();
+
+// // miAlumno.agregarAlumno("Leo", 4, 8);
+// // miAlumno.agregarAlumno("Caro", 8, 5);
+
+// // console.log(miAlumno.alumnos);
+// // console.log (miAlumno.mostrarPromedios())
+
+
+// 4. **Gestor de Tareas**
+//     - Clase Tarea con nombre y estado (completada).
+//     - Clase Tareas con métodos para filtrar las completadas.
+//     - Guarda las tareas en localStorage.
+
+// // class Tarea {
+// //     constructor(nombre, estado) {
+// //         this.nombre=nombre;
+// //         this.estado=estado;
+// //     }
+// // }
+
+// // class Tareas {
+// //     constructor (){
+// //         const tareaGuardada =localStorage.getItem("Tareas");
+// //         this.tareas= tareaGuardada ? JSON.parse (tareaGuardada) : [];
+// //     }
+
+
+// //             guardar(){
+// //             localStorage.setItem( "Tareas", JSON.stringify(this.tareas));
+// //         }
+
+
+
+// //         agregarTarea(nombre, estado){
+// //             const nuevaTarea= new Tarea(nombre, estado);
+// //             this.tareas.push(nuevaTarea);
+// //             this.guardar();
+// //         }
+
+
+// //         //filtrar
+
+// //         filtrarTarea(){
+// //             const tareaCompletada = this.tareas.filter(tarea=>tarea.estado===true);
+// //             return tareaCompletada
+// //         }
+// // }
+
+// // const miTarea = new Tareas ();
+
+// // miTarea.agregarTarea("Hacer la cama", false);
+// // miTarea.agregarTarea("Sacar al perro", true);
+
+
+// // console.log(miTarea.tareas);
+
+// // console.log(miTarea.filtrarTarea());
+
+
+// // 5. **Agenda de Contactos**
+// //     - Clase Contacto con nombre, teléfono y correo.
+// //     - Clase Agenda con método buscarPorNombre.
+// //     - Guarda los contactos en localStorage.
+
+
+
+// class Contacto {
+//     constructor(nombre, telefono, correo) {
+//         this.nombre=nombre;
+//         this.telefono=telefono;
+//         this.correo=correo;
+//     }
+// }
+
+
+// class Agenda {
+//     constructor() {
+//         const datosGuardados=localStorage.getItem("Agenda");
+
+//         this.contactos = datosGuardados ? JSON.parse(datosGuardados):[];
+//     }
+
+//         guardar(){
+//         localStorage.setItem("Agenda", JSON.stringify(this.contactos));
+//         }
+
+
+//         agregarContacto (nombre, telefono, correo){
+//             const nuevoContacto= new Contacto (nombre, telefono, correo);
+//             this.contactos.push(nuevoContacto);
+//             this.guardar();
+//         }
+
+
+//         buscarPorNombre (nombre){
+//             const buscadorNombre= this.contactos.filter(contacto=>contacto.nombre===nombre);
+//             return buscadorNombre;
+//         }
+
+// }
+
+
+
+
+// const miAgenda=new Agenda ();
+
+
+// miAgenda.agregarContacto("Juan", 131243432, "juan@gmail.com");
+// miAgenda.agregarContacto("Pepe", 6434352, "pepe@gmail.com");
+
+
+// console.log(miAgenda.contactos);
+
+
+// const contacto = prompt ("CONTACTO");
+
+// console.log(miAgenda.buscarPorNombre(contacto));
+
+// // 6. **Monitor de Temperaturas**
+// //     - Clase RegistroTemperaturas que almacena temperaturas.
+// //     - Métodos para obtener temperatura máxima y mínima.
+// //     - Persistencia con localStorage.
+
+// class Temperatura {
+//     constructor(temperatura) {
+//         this.temperatura=temperatura;
+//     }
+// }
+
+
+// class RegistroTemperaturas{
+//     constructor(){
+//         const datosGuardados = localStorage.getItem("temperaturas");
+
+
+//         this.temperaturas= datosGuardados ? JSON.parse(datosGuardados): [];
+//         }
+
+//         guardar(){
+//             localStorage.setItem("temperaturas", JSON.stringify(this.temperaturas));
+//         }
+
+
+//         agregarTemperatura (temperatura){
+//             const nuevaTemperatura = new Temperatura (temperatura);
+//             this.temperaturas.push(nuevaTemperatura);
+//             this.guardar();
+//         }
+
+
+//         ordenarTemp (){
+//             return this.temperaturas.sort((a,b)=>a.temperatura-b.temperatura);
+//         }
+
+//     }
+
+
+//     const registro= new RegistroTemperaturas ();
+
+//     registro.agregarTemperatura(37)
+//     registro.agregarTemperatura (40)
+
+//     console.log (registro);
+
 
