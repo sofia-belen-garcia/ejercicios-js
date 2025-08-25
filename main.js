@@ -1534,4 +1534,125 @@
 
 //     console.log (registro);
 
+///////////////////////////////////////////////////////////////////////////////////////
 
+//SEMANA 6: FUNCIONES DE ORDEN SUPERIOR
+
+// // 1. **Analizador de Compras**
+// //     - Clase Compra con producto, cantidad y precio.
+// //     - Clase HistorialCompras con método totalGastado() usando reduce.
+// //     - Guarda historial en localStorage.
+
+
+// const compras = [
+//     { compra: "Pan", cantidad: 2, precio: 300 },
+//     { compra: "Leche", cantidad: 1, precio: 800 },
+//     { compra: "Huevos", cantidad: 12, precio: 1500 },
+//     { compra: "Arroz", cantidad: 3, precio: 1200 },
+//     { compra: "Yerba", cantidad: 1, precio: 2500 }
+// ];
+
+// const carrito= compras.reduce(function(acc, valorActual){
+//     return acc + (valorActual.cantidad * valorActual.precio);
+// }, 0)
+
+// console.log (carrito)
+
+
+
+// // 2. **Filtro de Libros por Género**
+// //     - Clase Libro con título, autor y género.
+// //     - Clase Biblioteca con método filtrarPorGenero(genero) usando filter.
+// //     - Persistencia en localStorage.
+
+
+// const libros = [
+//     { titulo: "Cien años de soledad", autor: "Gabriel García Márquez", genero: "Realismo mágico" },
+//     { titulo: "1984", autor: "George Orwell", genero: "Distopía" },
+//     { titulo: "Un mundo feliz", autor: "Aldous Huxley", genero: "Distopía" },
+//     { titulo: "El señor de los anillos", autor: "J.R.R. Tolkien", genero: "Fantasía" },
+//     { titulo: "Harry Potter y la piedra filosofal", autor: "J.K. Rowling", genero: "Fantasía" },
+//     { titulo: "Orgullo y prejuicio", autor: "Jane Austen", genero: "Romance" },
+//     { titulo: "Jane Eyre", autor: "Charlotte Brontë", genero: "Romance" },
+//     { titulo: "Crimen y castigo", autor: "Fiódor Dostoyevski", genero: "Filosófico" }
+// ];
+
+//     let usuario= prompt("Decinos un genero pa filtrar");
+
+// const filtrarElGenero=libros.filter(function(el){
+//     return usuario==el.genero;
+// })
+// console.log(filtrarElGenero);
+
+
+// // 3. **Buscador de Contactos**
+// //     - Clase Contacto con nombre, teléfono.
+// //     - Clase Agenda con método buscar(nombre) usando find.
+// //     - Guarda contactos en localStorage.
+
+
+
+// class Contacto {
+//     constructor(nombre, telefono) {
+//         this.nombre=nombre;
+//         this.telefono=telefono;
+//     }
+// }
+
+
+// class Agenda {
+//     constructor() {
+//         const datosGuardados= localStorage.getItem("Agenda");
+
+//         this.agenda=datosGuardados ? JSON.parse(datosGuardados):[];
+//     }
+
+//     guardar(){
+//         localStorage.setItem("agenda", JSON.stringify(this.agenda));
+//     }
+
+//     agregarContacto (nombre, telefono){
+//         const nuevoContacto= new Contacto (nombre, telefono);
+//         this.agenda.push(nuevoContacto);
+//         this.guardar();
+//     }
+
+
+//     buscarPorNombre (nombre) {
+//         return this.agenda.find(contacto => contacto.nombre === nombre)
+//     }
+// }
+
+// miAgenda= new Agenda ();
+
+// const nombre= prompt("NOMBRE");
+// const telefono= prompt("TELEFONO");
+
+// miAgenda.agregarContacto(nombre, telefono);
+
+// console.log(miAgenda);
+
+// const nombreABuscar = prompt("Nombre a buscar");
+
+// console.log (miAgenda.buscarPorNombre(nombreABuscar));
+
+
+// // 4. **Resumen de Calificaciones**
+// //     - Clase Alumno con nombre y array de notas.
+// //     - Método mostrarResumen() usa map para mostrar nombre y promedio.
+// //     - Guarda resumen en localStorage.
+
+
+// const alumnos = [
+//     { nombre: "Sofía", nota1: 8, nota2: 7 },
+//     { nombre: "Martín", nota1: 6, nota2: 9 },
+//     { nombre: "Lucía", nota1: 10, nota2: 9 },
+//     { nombre: "Julián", nota1: 7, nota2: 8 },
+//     { nombre: "Valentina", nota1: 9, nota2: 10 }
+// ];
+
+// const promedios = alumnos.map (function (alumnos){
+//     let promedio= (alumnos.nota1 + alumnos.nota2) / 2
+//     console.log(`el promedio de ${alumnos.nombre} es ${promedio}`)
+//         return promedio
+// })
